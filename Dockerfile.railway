@@ -1,0 +1,8 @@
+FROM infiniflow/ragflow:v0.23.1
+
+COPY docker/railway/ragflow.conf.template /etc/nginx/conf.d/ragflow.conf.template
+COPY docker/railway/start.sh /railway/start.sh
+RUN chmod +x /railway/start.sh
+
+ENV PORT=8080
+CMD ["/railway/start.sh"]
