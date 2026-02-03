@@ -5,4 +5,4 @@ COPY docker/railway/start.sh /railway/start.sh
 RUN chmod +x /railway/start.sh
 
 ENV PORT=8080
-CMD ["/railway/start.sh"]
+ENTRYPOINT ["/railway/start.sh"]
