@@ -2,6 +2,7 @@ server {
     listen ${PORT};
     server_name _;
     root /ragflow/web/dist;
+    client_max_body_size 20M;
 
     gzip on;
     gzip_min_length 1k;
